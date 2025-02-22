@@ -161,7 +161,7 @@ function addUrlToList(shortUrl, longUrl) {
   qrcodeBtn.classList.add("btn", "btn-info")
   qrcodeBtn.setAttribute('onclick', 'buildQrcode(\"' + shortUrl + '\")')
   qrcodeBtn.setAttribute('id', 'qrcodeBtn-' + shortUrl)
-  qrcodeBtn.innerText = "QR"
+  qrcodeBtn.innerText = "显示详情"
   keyItem.appendChild(qrcodeBtn)
   
   child.appendChild(keyItem)
@@ -204,7 +204,7 @@ function deleteShortUrl(delKeyPhrase) {
       // 加载localStorage
       loadUrlList()
 
-      document.getElementById("result").innerHTML = "Delete Successful"
+      document.getElementById("result").innerHTML = "删除成功"
     } else {
       document.getElementById("result").innerHTML = res.error;
     }
